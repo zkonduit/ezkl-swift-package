@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		601F376F2C96FE7600338C69 /* EzklPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 601F376E2C96FE7600338C69 /* EzklPackage */; };
+		601F37712C96FE7900338C69 /* EzklPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 601F37702C96FE7900338C69 /* EzklPackage */; };
+		601F37932C96FEE700338C69 /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 601F378C2C96FEE700338C69 /* input.json */; };
+		601F37942C96FEE700338C69 /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 601F378C2C96FEE700338C69 /* input.json */; };
+		601F37952C96FEE700338C69 /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 601F378C2C96FEE700338C69 /* input.json */; };
+		601F37962C96FEE700338C69 /* kzg.srs in Resources */ = {isa = PBXBuildFile; fileRef = 601F378D2C96FEE700338C69 /* kzg.srs */; };
+		601F37972C96FEE700338C69 /* kzg.srs in Resources */ = {isa = PBXBuildFile; fileRef = 601F378D2C96FEE700338C69 /* kzg.srs */; };
+		601F37982C96FEE700338C69 /* kzg.srs in Resources */ = {isa = PBXBuildFile; fileRef = 601F378D2C96FEE700338C69 /* kzg.srs */; };
+		601F37992C96FEE700338C69 /* network.ezkl in Resources */ = {isa = PBXBuildFile; fileRef = 601F378E2C96FEE700338C69 /* network.ezkl */; };
+		601F379A2C96FEE700338C69 /* network.ezkl in Resources */ = {isa = PBXBuildFile; fileRef = 601F378E2C96FEE700338C69 /* network.ezkl */; };
+		601F379B2C96FEE700338C69 /* network.ezkl in Resources */ = {isa = PBXBuildFile; fileRef = 601F378E2C96FEE700338C69 /* network.ezkl */; };
+		601F379F2C96FEE700338C69 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 601F37902C96FEE700338C69 /* settings.json */; };
+		601F37A02C96FEE700338C69 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 601F37902C96FEE700338C69 /* settings.json */; };
+		601F37A12C96FEE700338C69 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 601F37902C96FEE700338C69 /* settings.json */; };
+		602CB3472C96F16D007F331A /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB3452C96F15E007F331A /* FileHelper.swift */; };
+		602CB3482C96F16D007F331A /* ProofModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB3412C96F15E007F331A /* ProofModel.swift */; };
+		602CB3492C96F16D007F331A /* VerifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB3422C96F15E007F331A /* VerifyModel.swift */; };
+		602CB34A2C96F16D007F331A /* WitnessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB3432C96F15E007F331A /* WitnessModel.swift */; };
+		602CB34B2C96F16D007F331A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB33B2C96F15E007F331A /* ContentView.swift */; };
+		602CB34C2C96F16D007F331A /* GenerateProofButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB33C2C96F15E007F331A /* GenerateProofButtonView.swift */; };
+		602CB34D2C96F16D007F331A /* GenerateWitnessButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB33D2C96F15E007F331A /* GenerateWitnessButtonView.swift */; };
+		602CB34E2C96F16D007F331A /* ResetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB33E2C96F15E007F331A /* ResetButtonView.swift */; };
+		602CB34F2C96F16D007F331A /* VerifyProofButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB33F2C96F15E007F331A /* VerifyProofButtonView.swift */; };
+		602CB3702C96F4BF007F331A /* EzklAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB36F2C96F4BF007F331A /* EzklAppUITests.swift */; };
+		60DB4F022C96ED270076CA77 /* EzklApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB4F012C96ED270076CA77 /* EzklApp.swift */; };
+		60DB4F062C96ED280076CA77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DB4F052C96ED280076CA77 /* Assets.xcassets */; };
+		60DB4F092C96ED280076CA77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DB4F082C96ED280076CA77 /* Preview Assets.xcassets */; };
+		60DB4F3C2C96EE470076CA77 /* EzklAppUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB4F3B2C96EE470076CA77 /* EzklAppUnitTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		602CB3732C96F4BF007F331A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60739B782C96ECC900722731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60DB4EFE2C96ED270076CA77;
+			remoteInfo = EzklApp;
+		};
+		60DB4F3D2C96EE470076CA77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60739B782C96ECC900722731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60DB4EFE2C96ED270076CA77;
+			remoteInfo = EzklApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		601F376D2C96FE7000338C69 /* EzklPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EzklPackage; path = ..; sourceTree = "<group>"; };
+		601F378C2C96FEE700338C69 /* input.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = input.json; sourceTree = "<group>"; };
+		601F378D2C96FEE700338C69 /* kzg.srs */ = {isa = PBXFileReference; lastKnownFileType = file; path = kzg.srs; sourceTree = "<group>"; };
+		601F378E2C96FEE700338C69 /* network.ezkl */ = {isa = PBXFileReference; lastKnownFileType = file; path = network.ezkl; sourceTree = "<group>"; };
+		601F37902C96FEE700338C69 /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
+		602CB33B2C96F15E007F331A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		602CB33C2C96F15E007F331A /* GenerateProofButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateProofButtonView.swift; sourceTree = "<group>"; };
+		602CB33D2C96F15E007F331A /* GenerateWitnessButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWitnessButtonView.swift; sourceTree = "<group>"; };
+		602CB33E2C96F15E007F331A /* ResetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButtonView.swift; sourceTree = "<group>"; };
+		602CB33F2C96F15E007F331A /* VerifyProofButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyProofButtonView.swift; sourceTree = "<group>"; };
+		602CB3412C96F15E007F331A /* ProofModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProofModel.swift; sourceTree = "<group>"; };
+		602CB3422C96F15E007F331A /* VerifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyModel.swift; sourceTree = "<group>"; };
+		602CB3432C96F15E007F331A /* WitnessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessModel.swift; sourceTree = "<group>"; };
+		602CB3452C96F15E007F331A /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		602CB36D2C96F4BF007F331A /* EzklAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EzklAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		602CB36F2C96F4BF007F331A /* EzklAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzklAppUITests.swift; sourceTree = "<group>"; };
+		60DB4EFF2C96ED270076CA77 /* EzklApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzklApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60DB4F012C96ED270076CA77 /* EzklApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzklApp.swift; sourceTree = "<group>"; };
+		60DB4F052C96ED280076CA77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60DB4F082C96ED280076CA77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		60DB4F392C96EE470076CA77 /* EzklAppUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EzklAppUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60DB4F3B2C96EE470076CA77 /* EzklAppUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzklAppUnitTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		602CB36A2C96F4BF007F331A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB4EFC2C96ED270076CA77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601F37712C96FE7900338C69 /* EzklPackage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB4F362C96EE470076CA77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601F376F2C96FE7600338C69 /* EzklPackage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		601F37922C96FEE700338C69 /* EzklAssets */ = {
+			isa = PBXGroup;
+			children = (
+				601F378C2C96FEE700338C69 /* input.json */,
+				601F378D2C96FEE700338C69 /* kzg.srs */,
+				601F378E2C96FEE700338C69 /* network.ezkl */,
+				601F37902C96FEE700338C69 /* settings.json */,
+			);
+			name = EzklAssets;
+			path = ../Tests/EzklAssets;
+			sourceTree = "<group>";
+		};
+		602CB3402C96F15E007F331A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				602CB33B2C96F15E007F331A /* ContentView.swift */,
+				602CB33C2C96F15E007F331A /* GenerateProofButtonView.swift */,
+				602CB33D2C96F15E007F331A /* GenerateWitnessButtonView.swift */,
+				602CB33E2C96F15E007F331A /* ResetButtonView.swift */,
+				602CB33F2C96F15E007F331A /* VerifyProofButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		602CB3442C96F15E007F331A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				602CB3412C96F15E007F331A /* ProofModel.swift */,
+				602CB3422C96F15E007F331A /* VerifyModel.swift */,
+				602CB3432C96F15E007F331A /* WitnessModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		602CB3462C96F15E007F331A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				602CB3452C96F15E007F331A /* FileHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		602CB36E2C96F4BF007F331A /* EzklAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				602CB36F2C96F4BF007F331A /* EzklAppUITests.swift */,
+			);
+			path = EzklAppUITests;
+			sourceTree = "<group>";
+		};
+		60739B772C96ECC900722731 = {
+			isa = PBXGroup;
+			children = (
+				601F37922C96FEE700338C69 /* EzklAssets */,
+				601F376D2C96FE7000338C69 /* EzklPackage */,
+				60DB4F002C96ED270076CA77 /* EzklApp */,
+				60DB4F3A2C96EE470076CA77 /* EzklAppUnitTests */,
+				602CB36E2C96F4BF007F331A /* EzklAppUITests */,
+				60739B812C96ECC900722731 /* Products */,
+				60DB4F232C96EDD40076CA77 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		60739B812C96ECC900722731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60DB4EFF2C96ED270076CA77 /* EzklApp.app */,
+				60DB4F392C96EE470076CA77 /* EzklAppUnitTests.xctest */,
+				602CB36D2C96F4BF007F331A /* EzklAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60DB4F002C96ED270076CA77 /* EzklApp */ = {
+			isa = PBXGroup;
+			children = (
+				602CB3462C96F15E007F331A /* Utilities */,
+				602CB3442C96F15E007F331A /* ViewModel */,
+				602CB3402C96F15E007F331A /* Views */,
+				60DB4F012C96ED270076CA77 /* EzklApp.swift */,
+				60DB4F052C96ED280076CA77 /* Assets.xcassets */,
+				60DB4F072C96ED280076CA77 /* Preview Content */,
+			);
+			path = EzklApp;
+			sourceTree = "<group>";
+		};
+		60DB4F072C96ED280076CA77 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				60DB4F082C96ED280076CA77 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		60DB4F232C96EDD40076CA77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60DB4F3A2C96EE470076CA77 /* EzklAppUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				60DB4F3B2C96EE470076CA77 /* EzklAppUnitTests.swift */,
+			);
+			path = EzklAppUnitTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		602CB36C2C96F4BF007F331A /* EzklAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 602CB3752C96F4BF007F331A /* Build configuration list for PBXNativeTarget "EzklAppUITests" */;
+			buildPhases = (
+				602CB3692C96F4BF007F331A /* Sources */,
+				602CB36A2C96F4BF007F331A /* Frameworks */,
+				602CB36B2C96F4BF007F331A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				602CB3742C96F4BF007F331A /* PBXTargetDependency */,
+			);
+			name = EzklAppUITests;
+			productName = EzklAppUITests;
+			productReference = 602CB36D2C96F4BF007F331A /* EzklAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		60DB4EFE2C96ED270076CA77 /* EzklApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60DB4F0A2C96ED280076CA77 /* Build configuration list for PBXNativeTarget "EzklApp" */;
+			buildPhases = (
+				60DB4EFB2C96ED270076CA77 /* Sources */,
+				60DB4EFC2C96ED270076CA77 /* Frameworks */,
+				60DB4EFD2C96ED270076CA77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EzklApp;
+			packageProductDependencies = (
+				601F37702C96FE7900338C69 /* EzklPackage */,
+			);
+			productName = EzklApp;
+			productReference = 60DB4EFF2C96ED270076CA77 /* EzklApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60DB4F382C96EE470076CA77 /* EzklAppUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60DB4F3F2C96EE470076CA77 /* Build configuration list for PBXNativeTarget "EzklAppUnitTests" */;
+			buildPhases = (
+				60DB4F352C96EE470076CA77 /* Sources */,
+				60DB4F362C96EE470076CA77 /* Frameworks */,
+				60DB4F372C96EE470076CA77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60DB4F3E2C96EE470076CA77 /* PBXTargetDependency */,
+			);
+			name = EzklAppUnitTests;
+			packageProductDependencies = (
+				601F376E2C96FE7600338C69 /* EzklPackage */,
+			);
+			productName = EzklAppUnitTests;
+			productReference = 60DB4F392C96EE470076CA77 /* EzklAppUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60739B782C96ECC900722731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					602CB36C2C96F4BF007F331A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 60DB4EFE2C96ED270076CA77;
+					};
+					60DB4EFE2C96ED270076CA77 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					60DB4F382C96EE470076CA77 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 60DB4EFE2C96ED270076CA77;
+					};
+				};
+			};
+			buildConfigurationList = 60739B7B2C96ECC900722731 /* Build configuration list for PBXProject "Example" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60739B772C96ECC900722731;
+			packageReferences = (
+			);
+			productRefGroup = 60739B812C96ECC900722731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60DB4EFE2C96ED270076CA77 /* EzklApp */,
+				60DB4F382C96EE470076CA77 /* EzklAppUnitTests */,
+				602CB36C2C96F4BF007F331A /* EzklAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		602CB36B2C96F4BF007F331A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601F379B2C96FEE700338C69 /* network.ezkl in Resources */,
+				601F37952C96FEE700338C69 /* input.json in Resources */,
+				601F37A12C96FEE700338C69 /* settings.json in Resources */,
+				601F37982C96FEE700338C69 /* kzg.srs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB4EFD2C96ED270076CA77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601F379F2C96FEE700338C69 /* settings.json in Resources */,
+				60DB4F092C96ED280076CA77 /* Preview Assets.xcassets in Resources */,
+				601F37992C96FEE700338C69 /* network.ezkl in Resources */,
+				601F37962C96FEE700338C69 /* kzg.srs in Resources */,
+				601F37932C96FEE700338C69 /* input.json in Resources */,
+				60DB4F062C96ED280076CA77 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB4F372C96EE470076CA77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601F379A2C96FEE700338C69 /* network.ezkl in Resources */,
+				601F37942C96FEE700338C69 /* input.json in Resources */,
+				601F37A02C96FEE700338C69 /* settings.json in Resources */,
+				601F37972C96FEE700338C69 /* kzg.srs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		602CB3692C96F4BF007F331A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				602CB3702C96F4BF007F331A /* EzklAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB4EFB2C96ED270076CA77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				602CB3472C96F16D007F331A /* FileHelper.swift in Sources */,
+				602CB3482C96F16D007F331A /* ProofModel.swift in Sources */,
+				602CB3492C96F16D007F331A /* VerifyModel.swift in Sources */,
+				602CB34A2C96F16D007F331A /* WitnessModel.swift in Sources */,
+				602CB34B2C96F16D007F331A /* ContentView.swift in Sources */,
+				602CB34C2C96F16D007F331A /* GenerateProofButtonView.swift in Sources */,
+				602CB34D2C96F16D007F331A /* GenerateWitnessButtonView.swift in Sources */,
+				602CB34E2C96F16D007F331A /* ResetButtonView.swift in Sources */,
+				602CB34F2C96F16D007F331A /* VerifyProofButtonView.swift in Sources */,
+				60DB4F022C96ED270076CA77 /* EzklApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB4F352C96EE470076CA77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60DB4F3C2C96EE470076CA77 /* EzklAppUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		602CB3742C96F4BF007F331A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60DB4EFE2C96ED270076CA77 /* EzklApp */;
+			targetProxy = 602CB3732C96F4BF007F331A /* PBXContainerItemProxy */;
+		};
+		60DB4F3E2C96EE470076CA77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60DB4EFE2C96ED270076CA77 /* EzklApp */;
+			targetProxy = 60DB4F3D2C96EE470076CA77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		602CB3762C96F4BF007F331A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.confidenti.projects.EzklAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EzklApp;
+			};
+			name = Debug;
+		};
+		602CB3772C96F4BF007F331A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.confidenti.projects.EzklAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EzklApp;
+			};
+			name = Release;
+		};
+		60739B8C2C96ECCA00722731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		60739B8D2C96ECCA00722731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60DB4F0B2C96ED280076CA77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EzklApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.confidenti.projects.EzklApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60DB4F0C2C96ED280076CA77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EzklApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.confidenti.projects.EzklApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		60DB4F402C96EE470076CA77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.confidenti.projects.EzklAppUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EzklApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EzklApp";
+			};
+			name = Debug;
+		};
+		60DB4F412C96EE470076CA77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.confidenti.projects.EzklAppUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EzklApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EzklApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		602CB3752C96F4BF007F331A /* Build configuration list for PBXNativeTarget "EzklAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				602CB3762C96F4BF007F331A /* Debug */,
+				602CB3772C96F4BF007F331A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60739B7B2C96ECC900722731 /* Build configuration list for PBXProject "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60739B8C2C96ECCA00722731 /* Debug */,
+				60739B8D2C96ECCA00722731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60DB4F0A2C96ED280076CA77 /* Build configuration list for PBXNativeTarget "EzklApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60DB4F0B2C96ED280076CA77 /* Debug */,
+				60DB4F0C2C96ED280076CA77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60DB4F3F2C96EE470076CA77 /* Build configuration list for PBXNativeTarget "EzklAppUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60DB4F402C96EE470076CA77 /* Debug */,
+				60DB4F412C96EE470076CA77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		601F376E2C96FE7600338C69 /* EzklPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EzklPackage;
+		};
+		601F37702C96FE7900338C69 /* EzklPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EzklPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 60739B782C96ECC900722731 /* Project object */;
+}

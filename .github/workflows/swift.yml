@@ -1,0 +1,69 @@
+name: Test EzklPackage
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+      branches:
+        - main
+      types:
+        - ready_for_review
+
+  # Option to manually trigger the workflow
+  workflow_dispatch:
+
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout ezkl-ios-port
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Install Git LFS
+        run: |
+          brew install git-lfs
+          git lfs install
+
+      - name: Set up Xcode environment
+        run: |
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          sudo xcodebuild -license accept
+
+      - name: Run Package Tests
+        run: |
+          xcodebuild test \
+            -scheme EzklPackage \
+            -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5' \
+            -resultBundlePath ./testResults
+
+      # We avoid the UI test because it always times out on GitHub Actions
+      - name: Run Example App Tests
+        run: |
+          cd Example
+          xcodebuild test \
+            -project Example.xcodeproj \
+            -scheme EzklApp \
+            -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5' \
+            -parallel-testing-enabled NO \
+            -resultBundlePath ./exampleTestResults \
+            -skip-testing:EzklAppUITests/EzklAppUITests/testButtonClicksInOrder
+
+      - name: Upload Test Results (Package)
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-test-results
+          path: ./testResults
+
+      - name: Upload Test Results (Example)
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: example-app-test-results
+          path: ./Example/exampleTestResults
