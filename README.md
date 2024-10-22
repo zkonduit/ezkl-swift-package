@@ -1,8 +1,8 @@
 # EZKL iOS Package
 
-Welcome to the **EZKL iOS Package**! This repository provides a Swift Package for integrating the [EZKL](https://ezkl.xyz) library into your iOS applications using Swift Package Manager. With this package, you can utilize EZKL's zero-knowledge proof capabilities directly within your Xcode projects.
+Welcome to the **EZKL iOS Package**! This repository provides a Swift Package for integrating the [EZKL](https://github.com/zkonduit/ezkl) library into your iOS applications using Swift Package Manager. With this package, you can utilize EZKL's zero-knowledge proof capabilities directly within your Xcode projects.
 
-> **Note:** This is an experimental project and should not be used in production environments.
+> **Note:** This repository is an experimental project and should not be used in production environments.
 
 ---
 
@@ -35,8 +35,9 @@ An example iOS application demonstrating how to use EZKL within an iOS app is av
 
    - In your Xcode project, go to **File** > **Add Packages...**
    - Click on **Add from Github...**
-   - Paste the URL of this repository and make sure to select the correct branch.
-   - Xcode will add the package to your project.
+   - Paste the URL of this repository and make sure to select the appropriate branch, such as `main`.
+   - Xcode will prompt you to select the **Targets** to add the package to.
+   - Once Xcode has added the package, you can use it as `EzklPackage`.
 
 ---
 
@@ -44,10 +45,10 @@ An example iOS application demonstrating how to use EZKL within an iOS app is av
 
 - **Xcode**: Version 12 or later.
 - **Swift**: Version 5.3 or later.
-- **Computer**: ARM Macbook (_XCode_ only runs on _macOS_).
+- **Computer**: ARM based Apple MacBook (_XCode_ only runs on _macOS_).
 
 
- > To develop on Intel x86 Macbook, please build the library manually using the instructions at the bottom.
+ > To develop on Intel x86 MacBook, please build the library manually using the instructions at the bottom.
 
 ---
 
@@ -59,17 +60,17 @@ Before using the EZKL functions in your app, you need to perform some initial se
 
 1. **Compile the Neural Network Circuit:**
 
-   - Use the EZKL CLI to compile your `.onnx` neural network model into a `.ezkl` circuit file.
+   - Use the [EZKL CLI](https://docs.ezkl.xyz/getting_started/) to compile your `.onnx` neural network model into a `.ezkl` circuit file.
 
 2. **Generate Supporting Files:**
 
    - **Settings File**: Generate the settings file required for the circuit.
    - **Structured Reference String (SRS)**: Obtain the SRS, which is necessary for proof generation and verification.
-   - **Proving Key (PK) and Verification Key (VK)**: Generate the PK and VK using the SRS.
+   - (Optional) **Proving Key (PK) and Verification Key (VK)**: Generate the PK and VK using the SRS.
 
 3. **Bundle the Files in Your App:**
 
-   - Include the generated `.ezkl` circuit file, settings, SRS, PK, and VK in your Xcode project, ensuring they are accessible at runtime.
+   - Include the generated `.ezkl` circuit file, settings, SRS, and optionally PK, and VK in your Xcode project, ensuring they are accessible at runtime.
 
 For more detailed instructions on using the EZKL CLI and generating the necessary files, refer to the [EZKL Documentation](https://docs.ezkl.xyz/getting_started/).
 
@@ -78,18 +79,18 @@ For more detailed instructions on using the EZKL CLI and generating the necessar
 Import the EZKL module in your Swift files:
 
 ```swift
-import EzklCore
+import EzklPackage
 ```
 
 #### Generating a Witness
 
 ```swift
 let inputData = /* Your input data as Data bytes */
-let compiledCircuitData = /* Data representation of your compiled circuit */
+let compiledCircuitData = /* Data representation of your compiled model */
 
-EzklCore.genWitness(
-    input: witnessData,
-    compiledCircuit: compiledCircuitData
+EzklPackage.genWitness(
+    compiledCircuit: compiledCircuitData,
+    input: witnessData
 ) { result in
     switch result {
     case .success(let witnessData):
@@ -155,7 +156,7 @@ EzklCore.verify(
 
 - **Data Formats:**
 
-  - **Input and Settings:** Should be provided as Json strings in 'Data' bytes.
+  - **Input and Settings:** Should be Json files provided as binary 'Data' bytes.
   - **Circuit, PK, VK, SRS:** Should be loaded as binary `Data`.
 
 - **EZKL CLI Usage:**
@@ -167,14 +168,33 @@ EzklCore.verify(
 
 ## Regenerating the Package
 
-The package is built from the Rust EZKL library fork at [ezkl-for-ios](https://github.com/ElusAegis/ezkl-for-ios) repository. If you wish to regenerate the bindings manually:
+The package is built from the Rust EZKL library fork at [ezkl](https://github.com/zkonduit/ezkl) library repository. If you wish to regenerate the bindings manually:
 
 1. **Clone the Porter Repository:**
 
    ```bash
-   git clone https://github.com/ElusAegis/ezkl-for-ios.git
+   git clone https://github.com/zkonduit/ezkl
    ```
 
-2. **Generate the Bindings:**
+2. **Install Prerequisites:**
 
-   - Follow the instructions in the `ezkl-for-ios` repository to generate the bindings.
+    Ensure that you have **Rust** and **Cargo** installed on your machine.
+
+3. **(Optional) Enabled x86 Mac Simulator**
+   - Open the `src/bin/ios_gen_bindings.rs` file.
+   - Locate the line that contains `vec!["aarch64-apple-ios-sim"],`.
+   - Comment out that line and uncomment the line immediately following it.
+
+4. **Generate iOS Bindings:**
+   In your terminal, execute the following command to generate the bindings:
+
+   ```bash
+   cargo run --bin ios_gen_bindings --features "ios-bindings uuid camino uniffi_bindgen" --no-default-features
+     ```
+
+   - After successful execution, the generated bindings will be located at `build/EzklCoreBindings`.
+   
+5. **Update Swift Package**
+
+    Replace the existing `EzklCoreBindings` folder inside the Swift Package’s `Sources` directory with the newly generated version.
+
